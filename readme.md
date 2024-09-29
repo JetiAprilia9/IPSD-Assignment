@@ -178,7 +178,10 @@ def print_prime_pattern(rows):
 print_prime_pattern(5)")
 ```
 #### Output:
+![Screenshot (499)](https://github.com/user-attachments/assets/7f05364c-0773-43d6-b1dc-c8becbdc8d9d)
 
+#### Penjelasan
+Fungsi ```is_prime(n)``` berguna untuk memeriksa apakah angka yang dimasukkan pada n adalah bilangan prima. Lalu Fungsi ```generate_primes(count)``` berguna untuk mengeksekusi dan menjawab daftar bilangan prima sebanyak (count). Fungsi ```print_prime_pattern(rows)``` adalah mencetak pola bilangan prima sesuai ketentuan dimana jumlah angka akan bertambah satu pada setiap baris dari baris sebelumnya. Untuk menjalankan program, panggil ```print_prime_pattern(n)``` dan isi n sesuai angka yang diinginkan.
 
 
 ### 2. Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
@@ -209,6 +212,10 @@ print(result)")
 ```
 
 #### Output
+![Screenshot (500)](https://github.com/user-attachments/assets/25b30fc6-932a-4b7a-81ca-b0a784778963)
+
+#### Penjelasan
+Pada function ```filter_and_sort_odd_indices(list1, list2)``` akan mengambil elemen dengan indeks ganjil dari kedua list yang menerima argumen (list1, list2), For berfungsi untuk ekstrak elemen pada bilangan ganjil dan menggabungkan elemen indeks ganjil tersebut ke dalam ```odd_index_elements```, serta ```sort(reverse=True) untuk mengurutkan list baru secara menurun.
 
 ### 3. Soal 3: Exception Handling dalam Konteks Nyata
 **Soal**: Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus:
@@ -257,6 +264,11 @@ atm_simulation()")
 ```
 
 #### Output
+![Screenshot (501)](https://github.com/user-attachments/assets/070cf457-d6f7-462b-9aee-adae323cc9e3)
+
+#### Penjelasan
+Pertama program akan menginisialisasi menggunakan variable ```correct_pin``` untuk menyimpan pin (pin harus benar), variable ```balance``` menyimpan saldo sesuai yang diinputkan pengguna, variable ```max_attemps``` memberi syarat jumlah maksimum percobaan memasukkan pin yaitu 3 kali. Loop for akan meminta pengguna memasukkan pin dengan ketentuan jika pin benar maka program dapat berjalan; jika salah sebanyak 3 kali akan tercetak pesan pemberitahuan "Anda telah memasukkan PIN yang salah terlalu banyak. Transaksi dibatalkan" dan program akan keluar. Try digunakan untuk menangani kemungkinan kesalahan dan jika pengguna memasukkan selain angkan, maka pesan kesalahan akan keluar. Lalu jika benar dan saldo mencukupi program akan memeriksa dan mencetak saldo terbaru; jika tidak, akan ditampilkan pesan kesalahan. ```ValueError``` berfungsi untuk memastikan penarikan sudah sesuai ketentuan.
+
 
 ### 4. Soal 4: Studi Kasus Pengelolaan Data
 **Soal**: Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis sebuah program yang:
@@ -328,6 +340,10 @@ if __name__ == "__main__":
 ```
 
 #### Output
+![Screenshot (502)](https://github.com/user-attachments/assets/42304946-7a1e-443b-b590-dcdf4cef4f43)
+
+#### Penjelasan
+Fungsi ```read_csv_to_dict(filename)``` untuk membaca file csv dan menyimpan data ke dalam dictionary, lalu fungsi ```calculate_average(grades)``` adalah menghitung nilai rata-rata, fungsi main() unuk membaca file CSV, menghitung rata-rata, menemukan nilai min dan max, dan menampilkan hasil. Pastikan untuk memasukkan file CSV ke dalam program agar program dapat berjalan.
 
 ### 5. Soal 5: Kombinasi Logika dan Kreativitas
 **Soal**: Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebih kecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah.
@@ -372,6 +388,11 @@ if __name__ == "__main__":
 ```
 
 #### Output
+![Screenshot (503)](https://github.com/user-attachments/assets/2941036c-799c-42c0-91fb-6ddb888aed1c)
+
+#### Penjelasan
+Import Modul random untuk mengacak nilai, fungsi ```guessing_game()``` memilih angka acak 1-100, mengatur percobaan sebanyak 5 kali, dan memberikan informasi game. For loop disini akan berfungsi sebagai pembatasan percobaan, konersi integer dari input pengguna, menampilkan pesan kesalahan jika nilai input tidak valid, memberikan pesan jika tebakan terlalu besar; terlalu kecil; dan benar. Lalu memberikan informasi jika menang, dan akan dieksekusi oleh fungsi ```guessing_game()``` di dalam blok ```if_name_=="_main_":```
+
 
 ### 6. Soal 6: Rekursi yang Tidak Biasa
 **Soal**: Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
@@ -406,6 +427,11 @@ print(result)")
 ```
 
 #### Output
+![Screenshot (504)](https://github.com/user-attachments/assets/d6aab1dc-b174-478f-968e-19429ddf62ec)
+
+#### Penjelasan
+Fungsi factorial(n) utnuk menghitung faktorial sesuai jumlah n dan ketentuan faktorial dari 0 atau 1 adalah 1, jika tidak maka fungsi mengalikan n dengan faktorial dari n-1. Fungsi ```generate_factorial_sequence(n)```yaitu mengembalikan urutan faktorial dari ke n, jika n kurnag dari 1 maka fungsi dikembalikan, jika tidak fungsi memanggil dirinya (n-1 untuk mendapatkan urutan n-1) dan menambahkan ke list.
+
 
 ### 7. Soal 7: Pemrograman dengan Algoritma Greedy
 **Soal**: Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
@@ -455,6 +481,10 @@ if __name__ == "__main__":
 ```
 
 #### Output
+![Screenshot (505)](https://github.com/user-attachments/assets/bf9c65ff-5e77-4f97-86f8-a5ba759ced92)
+
+#### Penjelasan
+Fungsi ```min_coins(amount, coin_values)``` berguna untuk menghitung kombinasi minimum koin, nilai koin diurutkan dari max ke min dengan memaksimalkan nilai yang lebih besar dahulu (strategi greedy), loop while untuk mengurangi amount hingga amount tidak cukup lagi pada nilai koin tersebut (1, 5, 10, 25), koin yang digunakan akan disimpan dalam list ```coin_used``` dan hitung total koin. Jika terdapat sisa amount, maka kombinasi koin untuk jumlah tersebut tidak dapat tercapai. Fungsi main() akan meminta pengguna memasukkan jumlah uang yang diinginkan dan memanggil min_coins untuk kombinasi koin dan cetak hasil.
 
 ### 8. Soal 8: Kombinasi String dan Manipulasi List
 **Soal**: Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. Misalnya:
@@ -492,6 +522,11 @@ if __name__ == "__main__":
 ```
 
 #### Output
+![Screenshot (506)](https://github.com/user-attachments/assets/d80f12b7-dcd8-4ca8-9b33-a75aa98e9bcf)
+
+#### Penjelasan
+Fungsi ```reverse_words(input_string)``` yakni mengambil dan memecah input menjadi list kata (split()), dan menggunakan list comprehension untuk membalik dan slicing tiap kata (word[::-1]) dan menyimpan dalam list baru dan mengembalikan list pada reverse_words. Fungsi main() akan meminta pengguna memasukkan kata atau kalimat dan membalik setiap hurufnya, serta mencetak hasilnya.
+
 
 ### 9. Soal 9: Konsep Class dan Object-Oriented Programming
 **Soal**: Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku.
@@ -530,6 +565,12 @@ for buku in (buku1, buku2, buku3):
 ```
 
 #### Output
+![Screenshot (507)](https://github.com/user-attachments/assets/699986f2-f77d-4098-acb2-2a11e36c0367)
+
+#### Penjelasan
+
+_init_ disini berfungsi sebagai sebuah method konstruktor untuk menginisialisasi judul, penulis, dan tahun_terbit. Lalu pada bagian tampilkan_informasi dan hitung_usia akan memberikan informasi pada buku dan menerima parameter tahun dengan menghitung tahun_terbit-tahun_sekarang. Program ini juga otomatis akan meng update masing-masing atribut pada buku tergNantung pada penambahan objeknya. Kemudia Loop akan mencetak informasi dan usia buku dengan method tersebut.
+
 
 ### 10. Soal 10: Algoritma dengan Persyaratan Logika Khusus
 **Soal**: Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
@@ -584,9 +625,19 @@ if __name__ == "__main__":
 ```
 
 #### Output
+![Screenshot (508)](https://github.com/user-attachments/assets/018499e4-03bc-47fb-b6ac-81cd3164860d)
+
+#### Penjelasan
+
+Pada fungsi ```binary_search(even_numbers, target)``` akan menerima list angka genap yang telah urut, menetapkan batas pencarian dengan left dan right, melakukan pencarian biner dengan menghitung indeks tengah dan membandingkan nilai dengan target; jika nilai ditemukan fungsi mengembalikan indeks dan jika tidak fungsi akan terus mempersempit pencarian hingga batas. Fungsi main() yaitu mendefinisikan list angka genap yang sudah urut, meminta input dan konervsi integer, jika angka adalah ganjil akan ditampilkan pesan kesalahan, jika input benar dan genap maka aka memanggil binary_search untuk mencari angka dan menampilkan hasil.
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Python adalah bahasa pemrograman yang menggunakan interpreter untuk menjalankan kode programnya. Interpreter tersebut dapat
+menerjemahkan kode secara langsung. Python juga memiliki integrasi dengan sistem database dan mampu membaca serta mengubah file yang disini menggunakan file CSV, sehingga mudah untuk digunakan. Pada modul ini, dikarenakan mempelajari dasar-dasar python untuk sains data maka hal yang dapat dipelajari adalah perbedaan tipe data dan jenis-jenis setiap function, operator, perulangan, dan percabangan beserta fungsinya. Pemahaman lebih dapat dicapai ketika telah eksekusi dan memahami setiap soal yang diberikan untuk menyelesaikan masalah.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] Rahman. S, et.al.,(2023), "Python: Dasar dan Pemrograman Berorientasi Objek".
+
+Berikut adalah link referensi:
+https://tahtamedia.co.id/index.php/issj/article/view/344
+
